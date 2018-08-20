@@ -33,10 +33,20 @@ urlpatterns = [
         view=views.Search.as_view(),
         name='search'
     ),
-        re_path(
+    re_path(
         r'(?P<username>\w+)/$', 
         view=views.UserProfile.as_view(),
         name='user_profile'
+    ),
+    re_path(
+        r'(?P<username>\w+)/password/$', 
+        view=views.ChangePassword.as_view(),
+        name='change'
+    ),
+    path(
+        'login/facebook/', 
+        view=views.FacebookLogin.as_view(),
+        name='fb_login'
     ),
 ]
 
