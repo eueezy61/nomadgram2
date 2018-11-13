@@ -8,7 +8,7 @@ class Container extends Component {
 
     static propTypes = {
         getUserProfile: PropTypes.func.isRequired,
-        userProfile: PropTypes.array
+        userProfile: PropTypes.object
     };
 
     componentDidMount() {

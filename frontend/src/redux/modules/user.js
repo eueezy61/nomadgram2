@@ -358,6 +358,7 @@ function applyFollowUser(state, action) {
   const { userId } = action;
   const { userList } = state;
   const updatedUserList = userList.map(user => {
+    console.log(user.id)
     if (user.id === userId) {
       return { ...user, following: true };
     }
@@ -367,6 +368,7 @@ function applyFollowUser(state, action) {
     ...state,
     userList: updatedUserList
   };
+
 }
 
 function applyUnfollowUser(state, action) {

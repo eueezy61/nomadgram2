@@ -1,7 +1,12 @@
-.profile-photo {
+.profile-display {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include boxBorder(yes);
   width: 100%;
-  max-width: $max-card-width;
+  max-width: $max-page-width;
   margin-bottom: 60px;
 
   @include breakpoint("phone") {
@@ -14,55 +19,75 @@
     margin-bottom: 0;
   }
 
-  .header {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid $border-color;
-
-    .image {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin-right: 15px;
-
-    }
-
-    .header-column {
-      display: flex;
-      flex-direction: column;
-
-      .creator {
-        font-weight: 600;
-        margin-bottom: 5px;
-      }
-
-      .location {
-        font-size: $small-font-size;
-      }
-    }
-  }
-  .profile {
-    display: flex;
-    justify-content: center;
-  }
-  .image-wrapper {
-    position: relative;
+  .my-profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    padding-top: 100%;
-    overflow: hidden;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border-bottom: 1px solid rgb(236, 236, 236);
 
-    .main-image {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .profile-image{
+      display: flex;
+      justify-content: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 40px;
+    }
+
+    .profileInfo{
       width: 100%;
+      height: 200px;
+      margin: 40px 0px;
+      display: grid;
+      grid-template-rows: 1fr 1fr 2fr;
+      
+
+      .infoOne{
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        align-items: center;
+
+        .infoUsername{
+          font-size: 25px;
+        }
+      }
+
+      .infoTwo{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+      }
+      .infoThree{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+
+        
+      }
     }
   }
+  .profileNav{
+    position: relative;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 50%;
+  }
 
-  .meta {
-    padding: 15px;
-    padding-bottom: 0;
-    padding-top: 10px;
+  .photoDisplay{
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 933px;
+    grid-gap: 10px;
   }
 }
+

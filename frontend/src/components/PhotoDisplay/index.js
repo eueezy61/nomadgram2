@@ -6,15 +6,15 @@ import styles from "./styles.scss";
 
 const PhotoDisplay = props => (
   <div className={styles.container}>
-    <img src={props.photo.file} className={styles.photo} alt={props.photo.photoId} />
+    <img src={props.file} className={styles.photo} alt={props.id} />
     <div className={styles.overlay}>
       <span className={styles.data}>
         <Ionicon icon="ios-heart" fontSize="22px" color="white" />{" "}
-        {props.photo.like_count}
+        {props.like_count}
       </span>
       <span className={styles.data}>
         <Ionicon icon="ios-text" fontSize="22px" color="white" />{" "}
-        {props.photo.comment_count}
+        {props.comment_count}
       </span>
     </div>
   </div>
