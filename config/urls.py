@@ -11,6 +11,7 @@ from nomadgram import views
 urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
+    path("api-token-auth/", obtain_jwt_token),
     # User management
     path(
         "rest-auth/", 
