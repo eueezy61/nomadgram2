@@ -65,3 +65,23 @@ $iphone6plus-width: 550px;
     opacity: 0.7;
   }
 }
+
+@mixin whiteButton() {
+  -webkit-appearance: none;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  font-weight: 400;
+  border: 1px solid rgb(230, 229, 229);
+  font-size: $normal-font-size;
+  line-height: 26px;
+  cursor: pointer;
+  width: 100%;
+  padding: 2px 9px;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}

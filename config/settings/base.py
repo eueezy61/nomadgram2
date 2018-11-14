@@ -250,15 +250,16 @@ SOCIALACCOUNT_ADAPTER = 'nomadgram.users.adapters.SocialAccountAdapter'
 
 TAGGIT_CASE_INSENSITIVE = True
 
+# django 서버로 접속 막혀서 주석처리 해놓음
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-    ),
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAuthenticated',
+#     ),
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+#     ),
+# }
 
 REST_USE_JWT = True
 ACCOUNT_LOGOUT_ON_GET = True
