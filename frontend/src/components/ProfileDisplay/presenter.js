@@ -18,7 +18,7 @@ const ProfileDisplay = (props, context) => {
         <div className={styles.profileInfo}>
           <div className={styles.infoOne}>
             <span className={styles.infoUsername}>{props.userProfile.username}</span>
-            <button className={styles.infoEdit}>Profile Edit</button>
+            <button className={styles.infoEdit}>Edit Profile</button>
             <span className={styles.infoConf}>
               <Link to="/config">
                 <Ionicon icon="ios-settings" fontSize="28px" color="black" />
@@ -27,9 +27,9 @@ const ProfileDisplay = (props, context) => {
 
           </div>
           <div className={styles.infoTwo}>
-            <span className={styles.infoPost}>Post {props.userProfile.post_count}</span>
-            <span className={styles.infoFollowers}>Followers {props.userProfile.followers_count}</span>
-            <span className={styles.infoFollowing}>Following {props.userProfile.following_count}</span>
+            <span className={styles.infoPost}>{props.userProfile.post_count} posts</span>
+            <span className={styles.infoFollowers}> {props.userProfile.followers_count} followers</span>
+            <span className={styles.infoFollowing}>{props.userProfile.following_count} following</span>
           </div>
           <div className={styles.infoThree}>
             <div>{props.userProfile.website}</div>
@@ -38,10 +38,10 @@ const ProfileDisplay = (props, context) => {
         </div>
       </div>
       <div className={styles.profileNav}>
-        <span>feed</span>
+        <span>POSTS</span>
         <span>IGTV</span>
-        <span>saved</span>
-        <span>tagged</span>
+        <span>SAVED</span>
+        <span>TAGGED</span>
       </div>
       <div className={styles.photoDisplay}>
         {props.userProfile.images.map(image => <PhotoDisplay {...image} key={image.id} />)}

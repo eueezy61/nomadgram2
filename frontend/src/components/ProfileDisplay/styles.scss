@@ -18,7 +18,7 @@
   &:last-child {
     margin-bottom: 0;
   }
-
+  background-color: transparent;
   .my-profile {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -52,12 +52,12 @@
         align-items: center;
 
         .infoUsername {
-          font-size: 25px;
+          font-size: 2rem;
         }
         .infoEdit{
           @include whiteButton();
           width: 75%;
-          
+          font-size: 0.8rem;
         }
       }
 
@@ -94,9 +94,7 @@
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 933px;
-    grid-gap: 10px;
+    grid-gap: 20px;
   }
 }
 

@@ -1,11 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-//import styles from "./styles.scss";
+import styles from "./styles.scss";
+import { Link } from "react-router-dom";
 
 const PhotoComments = props => (
   <div>
-    <ul>
-      <Comment username={props.creator} comment={props.caption} />
+    <ul className={styles.commentUl}>
+      <div className={styles.userComment} >
+        <Comment username={props.creator} comment={props.caption} />
+      </div>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <div className={styles.loadComments}>Load more comments</div>
+      </Link>
       {props.comments.map(comment => (
         <Comment
           username={comment.creator.username}
@@ -18,8 +24,8 @@ const PhotoComments = props => (
 );
 
 const Comment = props => (
-  <li>
-    <span>{props.username}</span> <span>{props.comment}</span>
+  <li className={styles.li}>
+    <span className={styles.liUsername}>{props.username}</span> <span>{props.comment}</span>
   </li>
 );
 

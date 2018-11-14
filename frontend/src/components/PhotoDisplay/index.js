@@ -6,16 +6,18 @@ import styles from "./styles.scss";
 
 const PhotoDisplay = props => (
   <div className={styles.container}>
-    <img src={props.file} className={styles.photo} alt={props.id} />
-    <div className={styles.overlay}>
-      <span className={styles.data}>
-        <Ionicon icon="ios-heart" fontSize="22px" color="white" />{" "}
-        {props.like_count}
-      </span>
-      <span className={styles.data}>
-        <Ionicon icon="ios-text" fontSize="22px" color="white" />{" "}
-        {props.comment_count}
-      </span>
+    <div className={styles.imageWrapper}>
+      <img src={props.file} className={styles.photo} alt={props.id} />
+      <div className={styles.overlay}>
+        <span className={styles.data}>
+          <Ionicon icon="ios-heart" fontSize="22px" color="white" />{" "}
+          {props.like_count}
+        </span>
+        <span className={styles.data}>
+          <Ionicon icon="ios-text" fontSize="22px" color="white" />{" "}
+          {props.comment_count}
+        </span>
+      </div>
     </div>
   </div>
 );
